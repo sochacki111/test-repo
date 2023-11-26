@@ -45,7 +45,7 @@ export default function PlanMap() {
 
   const handlePolygonCreated = (e) => {
     const { layerType, layer } = e;
-    layer.bindPopup('hello').openPopup();
+    // layer.bindPopup('hello').openPopup();
     if (layerType === 'polygon') {
       layer.setStyle({ fillColor: default_color, color: default_color });
 

@@ -61,11 +61,11 @@ Urząd Miasta Bieruń`);
           >
             <Popup key={polygonData.id} className="polygon-popup">
               <div className="popup-container">
-                <h3>{polygonData.name}</h3>
+                <h6>{polygonData.name}</h6>
                 <p>{polygonData.description}</p>
                 {polygonData.comments && polygonData.comments.length > 0 && (
                   <div>
-                    <h4>Komentarze:</h4>
+                    <h6>Komentarze:</h6>
                     <ul className="list-group">
                       {polygonData.comments.map((comment) => (
                         <li key={comment.id} className="list-group-item">

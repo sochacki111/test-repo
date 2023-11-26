@@ -3,6 +3,7 @@ import './FetchedPolygons.css';
 import { createComment } from '../api/bierun-api';
 import { fetchPolygons } from '../api/bierun-api';
 import { Popup, Polygon } from 'react-leaflet';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const FetchedPolygons = () => {
   const [polygons, setPolygons] = useState([]);
@@ -58,16 +59,18 @@ Urząd Miasta Bieruń`);
             positions={polygonData.coordinates}
             color="blue"
           >
-            <Popup key={polygonData.id}>
+            <Popup key={polygonData.id} className="polygon-popup">
               <div className="popup-container">
                 <h1>{polygonData.name}</h1>
                 <p>{polygonData.description}</p>
                 {polygonData.comments && polygonData.comments.length > 0 && (
                   <div>
                     <h4>Komentarze:</h4>
-                    <ul>
+                    <ul className="list-group">
                       {polygonData.comments.map((comment) => (
-                        <li key={comment.id}>{comment.text}</li>
+                        <li key={comment.id} className="list-group-item">
+                          {comment.text}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -82,15 +85,19 @@ Urząd Miasta Bieruń`);
                   }
                   className="comment-form"
                 >
-                  <label>
-                    Dodaj komentarz:
+                  <div className="form-group">
+                    <label htmlFor="commentTextarea">Dodaj komentarz:</label>
                     <textarea
+                      className="form-control"
+                      id="commentTextarea"
                       value={comment}
                       onChange={(e) => setComment(e.target.value)}
                       placeholder="Wpisz swój komentarz..."
                     />
-                  </label>
-                  <button type="submit">Dodaj komentarz</button>
+                  </div>
+                  <button type="submit" className="btn btn-primary">
+                    Dodaj komentarz
+                  </button>
                 </form>
               </div>
             </Popup>

@@ -61,7 +61,7 @@ Urząd Miasta Bieruń`);
           >
             <Popup key={polygonData.id} className="polygon-popup">
               <div className="popup-container">
-                <h6>{polygonData.name}</h6>
+                <h6 className="fw-bold">{polygonData.name}</h6>
                 <p>{polygonData.description}</p>
                 {polygonData.comments && polygonData.comments.length > 0 && (
                   <div>

@@ -1,21 +1,23 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const CreatePolygonForm = `
-<form id="createPolygonForm" style="max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); background-color: #f9f9f9;">
-<label style="display: block; margin-bottom: 8px;">
-  Nazwa zagospodarowania:
-  <input type="text" name="name" style="width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;">
-</label>
-<br />
-<label style="display: block; margin-bottom: 8px;">
-  Opis:
-  <textarea name="description" style="width: 100%; height: 228px; resize: none; padding: 8px; margin-bottom: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;"></textarea>
-</label>
-<br />
-<label style="display: block; margin-bottom: 8px;">
-  Data budowy:
-  <input type="date" name="startDate" style="width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;">
-</label>
-<br />
-<button type="submit" style="background-color: #4caf50; color: #fff; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;">Wyślij</button>
+<form id="createPolygonForm" class="mx-auto mt-4 p-4 border rounded shadow-sm bg-light" style="max-width: 400px;">
+  <div class="form-group mb-3">
+    <label for="polygonName" class="form-label">Nazwa zagospodarowania:</label>
+    <input type="text" name="name" class="form-control" id="polygonName" placeholder="Wprowadź nazwę" required>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="polygonDescription" class="form-label">Opis:</label>
+    <textarea name="description" class="form-control" id="polygonDescription" placeholder="Wprowadź opis" rows="5" required></textarea>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="startDate" class="form-label">Data budowy:</label>
+    <input type="date" name="startDate" class="form-control" id="startDate" required>
+  </div>
+
+  <button type="submit" class="btn btn-success">Wyślij</button>
 </form>
 `;
 

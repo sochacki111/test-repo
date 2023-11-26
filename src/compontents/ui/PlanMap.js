@@ -175,38 +175,6 @@ export default function PlanMap() {
           </FeatureGroup>
         </MapContainer>
       </div>
-      {/* <div
-        style={{
-          width: '300px',
-          padding: '20px',
-          backgroundColor: '#a5d6a7', // To jest kolor zielonkawy nawiązujący do miasta Bieruń
-        }}
-      >
-        <h2>Lista Inwestycji</h2>
-        <ul className="list-group">
-          {polygons.map((polygon) => (
-            <li
-              className="list-group-item"
-              key={polygon.id || polygon.name}
-              onClick={() => handleSidebarItemClick(polygon)}
-              style={{
-                cursor: 'pointer',
-                padding: '8px',
-                marginBottom: '4px',
-                transition: 'background-color 0.3s',
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.backgroundColor = '#e0e0e0';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.backgroundColor = 'inherit';
-              }}
-            >
-              {polygon.name}
-            </li>
-          ))}
-        </ul>
-      </div> */}
       <div
         className="d-flex flex-column align-items-stretch flex-shrink-0 bg-white"
         style={{ width: '380px' }}
